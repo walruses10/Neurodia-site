@@ -8,17 +8,41 @@ body {
 
 header {
     width: 100%;
-    background: linear-gradient(to bottom, #d0e8ff 0%, rgba(208, 232, 255, 0) 60%);
-    padding: 0.5rem 0 1rem 0;
-    border-bottom: 2px solid #a8cfff;
+    /* Sfuma solo sotto la scritta */
+    background: none; /* togliamo gradiente sull'intero header */
+    padding: 1rem 0 0 0; /* padding sopra */
     box-sizing: border-box;
-    text-align: center; /* centra il contenuto */
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #b58db6;
+    margin: 0 auto 1rem auto;
+    max-width: 600px;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+/* La barra azzurra sfumata solo sotto il sottotitolo */
+.subtitle::after {
+    content: "";
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 60px; /* altezza sfumatura */
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #d0e8ff 0%, rgba(208, 232, 255, 0) 100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 .logo {
     max-width: 400px;
-    margin-top: 0;
-    display: inline-block;
+    margin: 0 auto 0.5rem auto;
+    display: block;
 }
 
 main {
