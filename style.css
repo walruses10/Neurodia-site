@@ -28,15 +28,16 @@ main {
 
 .preview {
     text-align: center;
+    max-width: 400px;
     margin: 0 auto;
 }
 
 .preview img {
-    width: 400px;      /* Larghezza fissa */
-    height: auto;
+    width: 100% !important;
+    max-width: 400px !important;
+    height: auto !important;
     display: block;
     margin: 0 auto;
-    max-width: 100%;   /* Per evitare overflow su mobile */
 }
 
 .notice {
@@ -52,3 +53,4 @@ footer {
     font-size: 0.9rem;
     color: #777;
 }
+
