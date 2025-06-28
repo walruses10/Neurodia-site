@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Segoe UI', sans-serif;
     background: #fef9f6;
@@ -6,32 +5,46 @@ body {
     padding: 0;
     color: #333;
 }
+
 header {
     text-align: center;
     background-color: #fff0f5;
     padding: 2rem 1rem;
     border-bottom: 2px solid #f2dcdc;
 }
+
 .logo {
     max-width: 400px;
 }
+
 .subtitle {
     font-size: 1.2rem;
     color: #b58db6;
 }
+
 main {
     padding: 2rem;
 }
+
 .preview {
     text-align: center;
     max-width: 400px;
     margin: 0 auto;
 }
+
+.preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .notice {
     margin-top: 1rem;
     color: #888;
     font-style: italic;
 }
+
 footer {
     text-align: center;
     padding: 1rem;
