@@ -1,9 +1,9 @@
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: #f9fafc;        /* sfondo più soft */
+    background: #f9fafc;
     margin: 0;
     padding: 0;
-    color: #222831;             /* testo più scuro per contrasto */
+    color: #222831;
 }
 
 header {
@@ -11,7 +11,7 @@ header {
 }
 
 nav {
-    background-color: #30475e;  /* blu scuro più elegante */
+    background-color: #30475e;
     height: 100px;
     display: flex;
     align-items: center;
@@ -24,17 +24,16 @@ nav {
     max-width: 1200px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* logo a sinistra, menu a destra */
+    justify-content: space-between;
     padding: 0 2rem;
 }
 
 .logo {
-    height: 250px; /* logo grande come richiesto */
+    height: 250px;
     width: auto;
-    margin-right: 1rem; /* spazio a destra */
+    margin-right: 1rem;
 }
 
-/* Menu bottoni in linea, allineati a destra */
 .nav-links {
     list-style: none;
     display: flex;
@@ -45,3 +44,77 @@ nav {
 
 .nav-links li a {
     text-decoration: none;
+    color: #eeeeee;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #f05454;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: static;
+        flex-direction: row;
+        width: auto;
+        background-color: transparent;
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
+        display: flex;
+    }
+}
+
+#menu-toggle, .hamburger {
+    display: none !important;
+}
+
+.header-gradient {
+    height: 130px;
+    background: linear-gradient(to bottom, #30475e 0%, #f9fafc 100%);
+    width: 100%;
+}
+
+main {
+    padding: 2rem;
+    background: white;
+    max-width: 650px;
+    margin: auto;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+    border-radius: 8px;
+    text-align: center;
+    min-height: calc(100vh - 230px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #222831;
+}
+
+.preview {
+    max-width: 450px;
+    overflow: hidden;
+}
+
+.preview-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+}
+
+.notice {
+    margin-top: 1rem;
+    color: #555555;
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #222831;
+    font-size: 0.9rem;
+    color: #eeeeee;
+}
