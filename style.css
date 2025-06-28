@@ -30,8 +30,11 @@ nav {
 }
 
 .logo {
-    height: 72px;
+    height: 100px; /* aumentata da 72px a 100px */
     width: auto;
+    margin-right: 1.5rem; /* spazio a destra */
+}
+
 }
 
 .nav-links {
