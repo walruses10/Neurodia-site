@@ -1,34 +1,22 @@
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: #ffffff;
+    background: #f9fafc;        /* sfondo più soft */
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #222831;             /* testo più scuro per contrasto */
 }
 
-/* HEADER visibile e centrato */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background: #a9abb7;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+    display: none;
 }
 
-.logo {
-    height: 80px; /* dimensione più proporzionata */
-    width: auto;
-}
-
-/* NAV migliorato */
 nav {
-    background-color: #a9abb7;
+    background-color: #30475e;  /* blu scuro più elegante */
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 0.15);
 }
 
 .nav-container {
@@ -36,8 +24,14 @@ nav {
     max-width: 1200px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* logo a sinistra, menu a destra */
     padding: 0 2rem;
+}
+
+.logo {
+    height: 250px; /* logo grande come richiesto */
+    width: auto;
+    margin-right: 1rem; /* spazio a destra */
 }
 
 /* Menu bottoni in linea, allineati a destra */
@@ -51,169 +45,3 @@ nav {
 
 .nav-links li a {
     text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-    position: relative;
-}
-
-.nav-links li a:hover {
-    color: #5a6ad4;
-}
-
-/* Underline animato su hover */
-.nav-links li a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: #5a6ad4;
-    transition: width 0.3s ease;
-}
-
-.nav-links li a:hover::after {
-    width: 100%;
-}
-
-/* Disabilitiamo hamburger e menu a tendina per mobile */
-@media (max-width: 768px) {
-    .nav-links {
-        position: static;
-        flex-direction: row;
-        width: auto;
-        background-color: transparent;
-        padding: 0;
-        border-radius: 0;
-        box-shadow: none;
-        display: flex;
-    }
-}
-
-/* Rimuoviamo eventuale hamburger */
-#menu-toggle, .hamburger {
-    display: none !important;
-}
-
-/* HERO SECTION */
-.hero {
-    background: linear-gradient(135deg, #5a6ad4cc, #a9abb7cc);
-    color: white;
-    padding: 4rem 2rem;
-    border-radius: 8px;
-    margin: 2rem auto;
-    text-align: center;
-    max-width: 650px;
-    box-shadow: 0 6px 15px rgba(90, 106, 212, 0.3);
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-.hero button {
-    background-color: #5a6ad4;
-    border: none;
-    padding: 0.75rem 2rem;
-    font-size: 1rem;
-    color: white;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.hero button:hover {
-    background-color: #4758c2;
-}
-
-/* MAIN migliorato */
-main {
-    padding: 2rem;
-    background: white;
-    max-width: 650px;
-    margin: auto; /* centra verticalmente e orizzontalmente */
-    box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
-    border-radius: 8px;
-    text-align: center;
-    min-height: calc(100vh - 350px); /* altezza minima per quasi tutta la viewport */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* PREVIEW rimane invariato */
-.preview {
-    max-width: 450px;
-    overflow: hidden;
-}
-
-.preview-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
-}
-
-.notice {
-    margin-top: 1rem;
-    color: #888;
-    font-style: italic;
-}
-
-/* FOOTER più ricco */
-footer {
-    text-align: center;
-    padding: 1.5rem 2rem;
-    background-color: #f7f2f9;
-    font-size: 0.9rem;
-    color: #777;
-    max-width: 1200px;
-    margin: 2rem auto 0;
-    border-top: 1px solid #ddd;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-footer .footer-links {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-footer .footer-links li a {
-    color: #777;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer .footer-links li a:hover {
-    color: #5a6ad4;
-}
-
-footer .social-icons {
-    display: flex;
-    gap: 1rem;
-}
-
-footer .social-icons a {
-    color: #777;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-footer .social-icons a:hover {
-    color: #5a6ad4;
-}
