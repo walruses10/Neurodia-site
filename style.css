@@ -7,17 +7,23 @@ body {
 }
 
 header {
-    text-align: center;
-    background-color: #d0e8ff; /* azzurro chiaro */
-    padding: 0.8rem 1rem 1.5rem 1rem; /* meno spazio sopra, un po’ sotto */
-    border-bottom: 2px solid #a8cfff; /* bordo azzurro */
+    width: 100%;                 /* tutta la larghezza */
+    background-color: #d0e8ff !important; /* azzurro chiaro */
+    padding: 0.8rem 0;           /* meno padding laterale, solo sopra e sotto */
+    border-bottom: 2px solid #a8cfff !important;
+    box-sizing: border-box;      /* evita overflow con padding */
+}
+
+header .container {
     max-width: 600px;
     margin: 0 auto;
+    text-align: center;
+    padding: 0 1rem;             /* padding interno per distanziamento */
 }
 
 .logo {
     max-width: 400px;
-    margin-top: 0; /* assicura che non ci sia margine sopra il logo */
+    margin-top: 0;
 }
 
 .subtitle {
