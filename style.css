@@ -31,17 +31,27 @@ main {
     max-width: 400px;  /* Spazio massimo disponibile */
     margin: 0 auto;
     overflow: hidden;  /* Nasconde pixel fuori */
-    height: 300px; /* Imposta altezza fissa o adattala a piacere */
 }
 
 .preview img {
-    width: 100%;
-    height: 100%;
+    width: 10%;
+    height: auto;
+    max-height: 10%;
     object-fit: contain;     /* L’immagine resta interamente visibile */
     display: block;
     margin: 0 auto;
-    user-select: none;       /* Non selezionabile */
-    pointer-events: none;    /* Non interagibile col mouse */
 }
 
-/* Se vuoi rimuovere il drag anche da codice JS */
+.notice {
+    margin-top: 1rem;
+    color: #888;
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f7f2f9;
+    font-size: 0.9rem;
+    color: #777;
+}
