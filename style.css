@@ -12,27 +12,13 @@ header {
     padding: 0.5rem 0 1rem 0;
     border-bottom: 2px solid #a8cfff;
     box-sizing: border-box;
-}
-
-header .container {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;  /* centra tutto il contenuto */
-    padding: 0 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* centra il logo orizzontalmente */
+    text-align: center; /* centra il contenuto */
 }
 
 .logo {
     max-width: 400px;
     margin-top: 0;
-}
-
-.subtitle {
-    font-size: 1.2rem;
-    color: #b58db6;
-    margin-top: 0.3rem;
+    display: inline-block;
 }
 
 main {
@@ -46,12 +32,8 @@ main {
     overflow: hidden;
 }
 
-.preview img {
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
+.preview iframe {
+    border: none;
 }
 
 .notice {
@@ -67,4 +49,3 @@ footer {
     font-size: 0.9rem;
     color: #777;
 }
-
