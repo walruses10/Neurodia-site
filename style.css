@@ -7,28 +7,32 @@ body {
 }
 
 header {
-    width: 100%;                 /* tutta la larghezza */
-    background-color: #d0e8ff !important; /* azzurro chiaro */
-    padding: 0.8rem 0;           /* meno padding laterale, solo sopra e sotto */
-    border-bottom: 2px solid #a8cfff !important;
-    box-sizing: border-box;      /* evita overflow con padding */
+    width: 100%;
+    /* sfumatura dal azzurro chiaro (top) a trasparente (bottom) */
+    background: linear-gradient(to bottom, #d0e8ff 0%, rgba(208, 232, 255, 0) 60%);
+    padding: 0.5rem 0 1rem 0; /* meno padding sopra per far salire il logo */
+    border-bottom: 2px solid #a8cfff;
+    box-sizing: border-box;
 }
 
 header .container {
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
-    padding: 0 1rem;             /* padding interno per distanziamento */
+    padding: 0 1rem;
 }
 
 .logo {
     max-width: 400px;
     margin-top: 0;
+    display: inline-block; /* per centrare correttamente */
+    vertical-align: top;
 }
 
 .subtitle {
     font-size: 1.2rem;
     color: #b58db6;
+    margin-top: 0.3rem;
 }
 
 main {
@@ -61,5 +65,3 @@ footer {
     padding: 1rem;
     background-color: #f7f2f9;
     font-size: 0.9rem;
-    color: #777;
-}
