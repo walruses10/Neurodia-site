@@ -1,9 +1,18 @@
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #ffffff;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center; /* centro orizzontale */
+    align-items: center;     /* centro verticale */
+    background: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
     color: #333;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 header {
@@ -13,46 +22,5 @@ header {
 nav {
     background-color: #a9abb7;
     height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
-}
-
-.nav-container {
     width: 100%;
-    max-width: 1200px;
     display: flex;
-    align-items: center;
-    justify-content: space-between; /* logo a sinistra, menu a destra */
-    padding: 0 2rem;
-}
-
-.logo {
-    height: 250px; /* logo grande come richiesto */
-    width: auto;
-    margin-right: 1rem; /* spazio a destra */
-}
-
-/* Menu bottoni in linea, allineati a destra */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-    color: #5a6ad4;
-}
-
-/* Disabilitiamo hamburger e menu a tendina per mo*
