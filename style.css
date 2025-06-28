@@ -24,15 +24,14 @@ nav {
     max-width: 1200px;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* logo a sinistra */
+    justify-content: space-between; /* logo a sinistra, menu a destra */
     padding: 0 2rem;
-    gap: 3rem; /* spazio tra logo e menu */
 }
 
 .logo {
-    height: 100px;
+    height: 250px; /* logo grande come richiesto */
     width: auto;
-    margin-right: 3rem;
+    margin-right: 1rem; /* spazio a destra */
 }
 
 .nav-links {
@@ -46,76 +45,4 @@ nav {
 .nav-links li a {
     text-decoration: none;
     color: #333;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-    color: #5a6ad4;
-}
-
-/* Disabilitiamo hamburger e menu a tendina per mobile */
-@media (max-width: 768px) {
-    .nav-links {
-        position: static;
-        flex-direction: row;
-        width: auto;
-        background-color: transparent;
-        padding: 0;
-        border-radius: 0;
-        box-shadow: none;
-        display: flex;
-    }
-}
-
-/* Rimuoviamo eventuale hamburger */
-#menu-toggle, .hamburger {
-    display: none !important;
-}
-
-.header-gradient {
-    height: 130px;
-    background: linear-gradient(to bottom, #a9abb7 0%, #ffffff 100%);
-    width: 100%;
-}
-
-main {
-    padding: 2rem;
-    background: white;
-    max-width: 650px;
-    margin: 0 auto 2rem auto;
-    box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
-    border-radius: 8px;
-}
-
-.preview {
-    text-align: center;
-    max-width: 450px;
-    margin: 0 auto;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.preview-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
-}
-
-.notice {
-    margin-top: 1rem;
-    color: #888;
-    font-style: italic;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f7f2f9;
-    font-size: 0.9rem;
-    color: #777;
-}
+    fon
