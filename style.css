@@ -34,9 +34,9 @@ main {
 }
 
 .preview img {
-    width: 10%;
+    width: 100%;
     height: auto;
-    max-height: 10%;
+    max-height: 100%;
     object-fit: contain;     /* L’immagine resta interamente visibile */
     display: block;
     margin: 0 auto;
