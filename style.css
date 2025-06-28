@@ -55,35 +55,4 @@ nav {
     color: #5a6ad4;
 }
 
-/* Disabilitiamo hamburger e menu a tendina per mobile */
-@media (max-width: 768px) {
-    .nav-links {
-        position: static;
-        flex-direction: row;
-        width: auto;
-        background-color: transparent;
-        padding: 0;
-        border-radius: 0;
-        box-shadow: none;
-        display: flex;
-    }
-}
-
-/* Rimuoviamo eventuale hamburger */
-#menu-toggle, .hamburger {
-    display: none !important;
-}
-
-.header-gradient {
-    height: 130px;
-    background: linear-gradient(to bottom, #a9abb7 0%, #ffffff 100%);
-    width: 100%;
-}
-
-main {
-    padding: 2rem;
-    background: white;
-    max-width: 650px;
-    margin: 0 auto 2rem auto;
-    box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
-    border-radius: 8px;
+/* Disabilitiamo hamburger e menu a tendina per mo*
