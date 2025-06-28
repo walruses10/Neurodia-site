@@ -1,38 +1,95 @@
-/* Navbar container */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fef9f6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    width: 100%;
+    background: #a9abb7;
+    padding: 1rem 0 1.5rem 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.logo {
+    max-width: 220px; /* logo più grande nella navbar */
+    margin: 0 auto 0.5rem auto;
+    display: block;
+    cursor: pointer;
+}
+
+.header-gradient {
+    height: 130px;
+    background: linear-gradient(to bottom, #a9abb7 0%, #fef9f6 100%);
+    width: 100%;
+}
+
+main {
+    padding: 2rem;
+    background: white;
+    max-width: 650px;
+    margin: 0 auto 2rem auto;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+    border-radius: 8px;
+}
+
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background-color: #a9abb7; /* tua tonalità grigio lilla */
-  box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #a9abb7; /* tua tonalità grigio lilla */
+    box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
 }
 
-/* Logo */
-nav .logo {
-  max-width: 160px;
-  cursor: pointer;
-}
-
-/* Menu */
 nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
 }
 
-/* Menu link */
 nav ul li a {
-  text-decoration: none;
-  color: #333; /* testo scuro */
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+    text-decoration: none;
+    color: #333; /* testo scuro */
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
-/* Hover link */
 nav ul li a:hover {
-  color: #5a6ad4; /* un azzurro/blu soft per hover */
+    color: #5a6ad4; /* azzurro/blu soft per hover */
+}
+
+.preview {
+    text-align: center;
+    max-width: 450px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.preview iframe {
+    border: none;
+    border-radius: 6px;
+}
+
+.notice {
+    margin-top: 1rem;
+    color: #888;
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f7f2f9;
+    font-size: 0.9rem;
+    color: #777;
 }
