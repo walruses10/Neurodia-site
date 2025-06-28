@@ -30,11 +30,14 @@ main {
     text-align: center;
     max-width: 400px;  /* Spazio massimo disponibile */
     margin: 0 auto;
+    overflow: hidden;  /* Nasconde pixel fuori */
 }
 
 .preview img {
-    width: 100% !important;     /* L’immagine riempie tutto lo spazio */
-    height: auto !important;    /* Mantiene proporzioni */
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;     /* L’immagine resta interamente visibile */
     display: block;
     margin: 0 auto;
 }
@@ -52,4 +55,3 @@ footer {
     font-size: 0.9rem;
     color: #777;
 }
-
