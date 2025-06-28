@@ -33,6 +33,7 @@ nav {
     height: 250px; /* aumentata da 72px a 100px */
     width: auto;
     margin-right: 0.5rem; /* spazio a destra */
+    margin-left: 0.5rem;
 }
 
 }
