@@ -8,45 +8,36 @@ body {
 
 header {
     width: 100%;
-    /* Sfuma solo sotto la scritta */
-    background: none; /* togliamo gradiente sull'intero header */
-    padding: 1rem 0 0 0; /* padding sopra */
+    background: #d0e8ff; /* azzurro pieno */
+    padding: 0.5rem 0 2rem 0;
     box-sizing: border-box;
     text-align: center;
-}
-
-.subtitle {
-    font-size: 1.2rem;
-    color: #b58db6;
-    margin: 0 auto 1rem auto;
-    max-width: 600px;
     position: relative;
-    padding-bottom: 1rem;
-}
-
-/* La barra azzurra sfumata solo sotto il sottotitolo */
-.subtitle::after {
-    content: "";
-    display: block;
-    width: 100%;
-    max-width: 600px;
-    height: 60px; /* altezza sfumatura */
-    margin: 0 auto;
-    background: linear-gradient(to bottom, #d0e8ff 0%, rgba(208, 232, 255, 0) 100%);
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
+    /* sfumatura verso bianco sotto il header */
+    background-image: linear-gradient(to bottom, #d0e8ff 0%, #fef9f6 80%);
 }
 
 .logo {
     max-width: 400px;
-    margin: 0 auto 0.5rem auto;
+    margin: 0 auto 0.3rem auto; /* logo più in alto */
     display: block;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #3b4f72; /* un blu più scuro per contrasto */
+    margin: 0 auto 1.5rem auto;
+    max-width: 600px;
+    font-weight: 600;
 }
 
 main {
     padding: 2rem;
+    background: white; /* sfondo bianco per la sezione anteprima */
+    max-width: 650px;
+    margin: -1rem auto 2rem auto; /* tira un po' su la sezione rispetto al footer */
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+    border-radius: 8px;
 }
 
 .preview {
@@ -58,6 +49,7 @@ main {
 
 .preview iframe {
     border: none;
+    border-radius: 6px;
 }
 
 .notice {
