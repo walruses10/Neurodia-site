@@ -8,13 +8,16 @@ body {
 
 header {
     text-align: center;
-    background-color: #fff0f5;
-    padding: 2rem 1rem;
-    border-bottom: 2px solid #f2dcdc;
+    background-color: #d0e8ff; /* azzurro chiaro */
+    padding: 0.8rem 1rem 1.5rem 1rem; /* meno spazio sopra, un po’ sotto */
+    border-bottom: 2px solid #a8cfff; /* bordo azzurro */
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .logo {
     max-width: 400px;
+    margin-top: 0; /* assicura che non ci sia margine sopra il logo */
 }
 
 .subtitle {
@@ -28,16 +31,15 @@ main {
 
 .preview {
     text-align: center;
-    max-width: 450px;  /* Spazio massimo disponibile */
+    max-width: 450px;
     margin: 0 auto;
-    overflow: hidden;  /* Nasconde pixel fuori */
+    overflow: hidden;
 }
 
 .preview img {
     width: auto;
     height: auto;
-    max-height: auto;
-    object-fit: contain;     /* L’immagine resta interamente visibile */
+    object-fit: contain;
     display: block;
     margin: 0 auto;
 }
