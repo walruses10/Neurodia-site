@@ -8,7 +8,7 @@ body {
 
 header {
     width: 100%;
-    background: #0554cc; /* blu un po' più scuro */
+    background: #095ec9; /* blu un po' più scuro del primo */
     padding: 1rem 0 1.5rem 0;
     box-sizing: border-box;
     text-align: center;
@@ -21,8 +21,8 @@ header {
 }
 
 .header-gradient {
-    height: 130px;  /* aumentata da 100px a 130px per far scendere la sfumatura */
-    background: linear-gradient(to bottom, #0554cc 0%, #fef9f6 100%);
+    height: 130px;
+    background: linear-gradient(to bottom, #095ec9 0%, #fef9f6 100%);
     width: 100%;
 }
 
@@ -60,4 +60,3 @@ footer {
     font-size: 0.9rem;
     color: #777;
 }
-
