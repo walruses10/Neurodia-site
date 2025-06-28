@@ -13,7 +13,7 @@ header {
     border-bottom: 2px solid #f2dcdc;
 }
 .logo {
-    max-width: 100px;
+    max-width: 400px;
 }
 .subtitle {
     font-size: 1.2rem;
@@ -24,7 +24,7 @@ main {
 }
 .preview {
     text-align: center;
-    max-width: 800px;
+    max-width: 400px;
     margin: 0 auto;
 }
 .notice {
