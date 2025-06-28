@@ -28,7 +28,7 @@ main {
 
 .preview {
     text-align: center;
-    max-width: 500px;  /* Spazio massimo disponibile */
+    max-width: 450px;  /* Spazio massimo disponibile */
     margin: 0 auto;
     overflow: hidden;  /* Nasconde pixel fuori */
 }
