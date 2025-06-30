@@ -5,19 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NeuroDia - Registrazione</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Stile checkbox mostra password */
-    .show-password-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-      user-select: none;
-      cursor: pointer;
-      color: #444;
-    }
-  </style>
 </head>
 <body>
 
@@ -34,7 +21,7 @@
     <div class="nav-right">
       <ul class="nav-links">
         <li><a href="accesso.html">ACCESSO</a></li>
-        <li><a href="registrazione.html">REGISTRATI</a></li>
+        <li><a href="registrazione.html" class="active">REGISTRATI</a></li>
       </ul>
     </div>
   </div>
@@ -89,7 +76,6 @@
 
   const passwordInput = document.getElementById('password');
 
-  // Spunte password
   const lengthCriteria = document.getElementById('lengthCriteria');
   const numberCriteria = document.getElementById('numberCriteria');
   const specialCharCriteria = document.getElementById('specialCharCriteria');
@@ -98,28 +84,24 @@
   passwordInput.addEventListener('input', () => {
     const val = passwordInput.value;
 
-    // Lunghezza 8-14
     if(val.length >= 8 && val.length <= 14) {
       lengthCriteria.classList.add('valid');
     } else {
       lengthCriteria.classList.remove('valid');
     }
 
-    // Numero
     if(/\d/.test(val)) {
       numberCriteria.classList.add('valid');
     } else {
       numberCriteria.classList.remove('valid');
     }
 
-    // Carattere speciale (es. !@#$%^&*)
     if(/[!@#$%^&*(),.?":{}|<>]/.test(val)) {
       specialCharCriteria.classList.add('valid');
     } else {
       specialCharCriteria.classList.remove('valid');
     }
 
-    // Prima lettera maiuscola
     if(val.length > 0 && val[0] === val[0].toUpperCase() && /[A-Z]/.test(val[0])) {
       capitalCriteria.classList.add('valid');
     } else {
@@ -137,13 +119,12 @@
     }
   });
 
-  // Form submit
+  // Submit form
   const form = document.getElementById('registrationForm');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    // Qui puoi aggiungere validazioni lato client
-    // e chiamate backend per registrazione reale
+    // Aggiungi validazioni lato client qui se vuoi
 
     alert("Registrazione completata! (funzionalità backend da implementare)");
   });
@@ -151,5 +132,3 @@
 
 </body>
 </html>
-
-
