@@ -12,9 +12,10 @@ header {
 
 nav {
     background-color: #a9abb7;
-    height: 100px;
+    /* rimosso height fisso */
+    padding: 1rem 0; /* spazio verticale */
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* allinea contenuto in alto */
     justify-content: center;
     box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
 }
@@ -37,7 +38,7 @@ nav {
 .logo {
     height: 250px;
     width: auto;
-    margin-right: 1rem;
+    margin: 0 1rem 0 0; /* solo margine a destra */
 }
 
 /* Stile menu */
