@@ -5,175 +5,121 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NeuroDia - Registrazione</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f6f8ff;
-      margin: 0;
-      padding: 0;
-    }
-
-    .register-wrapper {
-      max-width: 500px;
-      margin: 60px auto;
-      padding: 30px;
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #333;
-    }
-
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: 600;
-    }
-
-    input {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-    }
-
-    .password-checks {
-      font-size: 0.9em;
-      margin-top: 10px;
-    }
-
-    .password-checks li {
-      list-style: none;
-      color: #777;
-    }
-
-    .password-checks li.valid {
-      color: green;
-    }
-
-    .error {
-      color: red;
-      font-size: 0.9em;
-      margin-top: 5px;
-    }
-
-    button {
-      margin-top: 20px;
-      width: 100%;
-      padding: 12px;
-      background-color: #5C67F2;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1em;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #4a54e1;
-    }
-  </style>
 </head>
 <body>
 
-  <div class="register-wrapper">
-    <h2>Crea il tuo account</h2>
+<nav>
+  <div class="nav-container">
+    <div class="nav-left">
+      <img src="logo.png" alt="NeuroDia Logo" class="logo" />
+      <ul class="nav-links">
+        <li><a href="index.html#home">HOME</a></li>
+        <li><a href="index.html#neurodia">NEURODIA</a></li>
+        <li><a href="index.html#contatti">CONTATTI</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="accesso.html">ACCESSO</a></li>
+        <li><a href="registrazione.html">REGISTRATI</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-    <form id="registerForm">
+<main>
+  <div class="register-wrapper">
+    <h2>Registrati</h2>
+    <p>Compila tutti i campi per creare il tuo account</p>
+
+    <form id="registrationForm" novalidate>
       <label for="nome">Nome</label>
-      <input type="text" id="nome" name="nome" required />
+      <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome" required />
 
       <label for="cognome">Cognome</label>
-      <input type="text" id="cognome" name="cognome" required />
+      <input type="text" id="cognome" name="cognome" placeholder="Inserisci il tuo cognome" required />
 
       <label for="dataNascita">Data di nascita</label>
-      <input type="date" id="dataNascita" name="dataNascita" required />
+      <input type="date" id="dataNascita" name="dataNascita" required max="" />
 
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
-      <div id="email-error" class="error"></div>
+      <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required />
 
       <label for="password">Password</label>
-      <input type="password" id="password" name="password" required />
-      
-      <ul class="password-checks">
-        <li id="length">✓ 8-14 caratteri</li>
-        <li id="uppercase">✓ Inizia con maiuscola</li>
-        <li id="number">✓ Contiene almeno un numero</li>
-        <li id="special">✓ Contiene un carattere speciale</li>
+      <input type="password" id="password" name="password" placeholder="Crea una password sicura" required minlength="8" maxlength="14" />
+
+      <ul class="password-criteria" id="passwordCriteria">
+        <li id="lengthCriteria">8-14 caratteri</li>
+        <li id="numberCriteria">Almeno 1 numero</li>
+        <li id="specialCharCriteria">Almeno 1 carattere speciale</li>
+        <li id="capitalCriteria">Prima lettera maiuscola</li>
       </ul>
 
       <button type="submit">Registrati</button>
     </form>
   </div>
+</main>
 
-  <script>
-    // Simulazione email già registrate
-    const existingEmails = ["test@email.com", "utente@neurodia.it"];
+<footer>
+  <p>&copy; 2025 NeuroDia. Tutti i diritti riservati.</p>
+</footer>
 
-    const emailInput = document.getElementById("email");
-    const emailError = document.getElementById("email-error");
-    const passwordInput = document.getElementById("password");
+<script>
+  // Imposta max data nascita a oggi per il campo data
+  const dataNascitaInput = document.getElementById('dataNascita');
+  dataNascitaInput.max = new Date().toISOString().split('T')[0];
 
-    const lengthCheck = document.getElementById("length");
-    const uppercaseCheck = document.getElementById("uppercase");
-    const numberCheck = document.getElementById("number");
-    const specialCheck = document.getElementById("special");
+  const passwordInput = document.getElementById('password');
 
-    emailInput.addEventListener("blur", function () {
-      const email = emailInput.value.trim();
-      if (existingEmails.includes(email)) {
-        emailError.textContent = "Email già registrata.";
-      } else {
-        emailError.textContent = "";
-      }
-    });
+  // Spunte password
+  const lengthCriteria = document.getElementById('lengthCriteria');
+  const numberCriteria = document.getElementById('numberCriteria');
+  const specialCharCriteria = document.getElementById('specialCharCriteria');
+  const capitalCriteria = document.getElementById('capitalCriteria');
 
-    passwordInput.addEventListener("input", function () {
-      const pwd = passwordInput.value;
+  passwordInput.addEventListener('input', () => {
+    const val = passwordInput.value;
 
-      // Lunghezza
-      if (pwd.length >= 8 && pwd.length <= 14) {
-        lengthCheck.classList.add("valid");
-      } else {
-        lengthCheck.classList.remove("valid");
-      }
+    // Lunghezza 8-14
+    if(val.length >= 8 && val.length <= 14) {
+      lengthCriteria.classList.add('valid');
+    } else {
+      lengthCriteria.classList.remove('valid');
+    }
 
-      // Prima maiuscola
-      if (pwd.charAt(0).match(/[A-Z]/)) {
-        uppercaseCheck.classList.add("valid");
-      } else {
-        uppercaseCheck.classList.remove("valid");
-      }
+    // Numero
+    if(/\d/.test(val)) {
+      numberCriteria.classList.add('valid');
+    } else {
+      numberCriteria.classList.remove('valid');
+    }
 
-      // Numero
-      if (/\d/.test(pwd)) {
-        numberCheck.classList.add("valid");
-      } else {
-        numberCheck.classList.remove("valid");
-      }
+    // Carattere speciale (es. !@#$%^&*)
+    if(/[!@#$%^&*(),.?":{}|<>]/.test(val)) {
+      specialCharCriteria.classList.add('valid');
+    } else {
+      specialCharCriteria.classList.remove('valid');
+    }
 
-      // Carattere speciale
-      if (/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(pwd)) {
-        specialCheck.classList.add("valid");
-      } else {
-        specialCheck.classList.remove("valid");
-      }
-    });
+    // Prima lettera maiuscola
+    if(val.length > 0 && val[0] === val[0].toUpperCase() && /[A-Z]/.test(val[0])) {
+      capitalCriteria.classList.add('valid');
+    } else {
+      capitalCriteria.classList.remove('valid');
+    }
+  });
 
-    // (Opzionale) Blocco invio se la email è già registrata
-    document.getElementById("registerForm").addEventListener("submit", function (e) {
-      if (existingEmails.includes(emailInput.value.trim())) {
-        e.preventDefault();
-        alert("Questa email è già registrata.");
-      }
-    });
-  </script>
+  // Form submit
+  const form = document.getElementById('registrationForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Qui puoi aggiungere validazioni lato client
+    // e chiamate backend per registrazione reale
+
+    alert("Registrazione completata! (funzionalità backend da implementare)");
+  });
+</script>
+
 </body>
 </html>
