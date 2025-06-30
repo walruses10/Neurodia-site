@@ -35,7 +35,7 @@ nav {
 }
 
 .logo {
-    height: 200px;
+    height: 250px;
     width: auto;
     margin-right: 1rem;
 }
@@ -128,4 +128,29 @@ footer {
     background-color: #f7f2f9;
     font-size: 0.9rem;
     color: #777;
+}
+
+/* --- Welcome message styling --- */
+
+.welcome-message {
+    max-width: 650px;
+    margin: 2rem auto 3rem auto;
+    text-align: center;
+    padding: 0 1rem;
+    color: #333;
+}
+
+.welcome-message h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #5a6ad4; /* blu menu hover */
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.welcome-message p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #555;
+    font-weight: 400;
 }
