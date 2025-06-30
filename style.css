@@ -1,3 +1,4 @@
+/* --- Stile base generale --- */
 body {
     font-family: 'Segoe UI', sans-serif;
     background: #ffffff;
@@ -10,6 +11,7 @@ header {
     display: none;
 }
 
+/* --- Navbar --- */
 nav {
     background-color: #d6d8dc;
     height: 100px;
@@ -82,6 +84,7 @@ nav {
     display: none !important;
 }
 
+/* --- Main e sezioni --- */
 main {
     padding: 2rem;
     background: white;
@@ -124,75 +127,12 @@ footer {
 }
 
 /* --- Welcome message styling --- */
-
 .welcome-message {
     max-width: 650px;
     margin: 2rem auto 3rem auto;
 }
 
-/* --- Sezione NeuroDia Styling --- */
-
-.neurodia-section {
-    max-width: 650px;
-    margin: 3rem auto 4rem auto;
-    text-align: center;
-}
-
-.neurodia-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #222;
-}
-
-.neurodia-section p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    color: #444;
-    line-height: 1.5;
-}
-
-.diario-copertina {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 6px 15px rgb(0 0 0 / 0.15);
-    margin-bottom: 1.5rem;
-}
-
-.prezzo {
-    font-weight: 700;
-    color: #5a6ad4;
-    margin-bottom: 1.5rem;
-}
-
-/* Bottoni NeuroDia */
-.btn-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 1rem;
-    flex-wrap: wrap;
-}
-
-.btn-container button {
-    background-color: #5a6ad4;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    min-width: 180px;
-}
-
-.btn-container button:hover {
-    background-color: #4356b8;
-}
-
-/* --- Accesso e Registrazione (lasciati come avevi) --- */
-
+/* --- Login page --- */
 .login-wrapper {
   max-width: 400px;
   margin: 3rem auto;
@@ -285,6 +225,7 @@ footer {
   }
 }
 
+/* --- Registrazione --- */
 .register-wrapper {
   max-width: 450px;
   margin: 3rem auto;
@@ -349,4 +290,128 @@ footer {
 
 .register-wrapper button:hover {
   background-color: #4356b8;
+}
+
+/* Password criteria box */
+.password-criteria {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.password-criteria li {
+  list-style: none;
+  margin: 0.4rem 0;
+  color: #999;
+  display: flex;
+  align-items: center;
+}
+
+.password-criteria li.valid {
+  color: #28a745;
+}
+
+.password-criteria li::before {
+  content: "✖";
+  margin-right: 8px;
+  color: #999;
+}
+
+.password-criteria li.valid::before {
+  content: "✔";
+  color: #28a745;
+}
+
+@media (max-width: 480px) {
+  .register-wrapper {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
+
+/* --- NeuroDia page specific styles --- */
+.neurodia-container {
+    max-width: 650px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.neurodia-container h1 {
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+.neurodia-container p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.neurodia-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.price-info {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+/* Bottoni */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.btn {
+    background-color: #5a6ad4;
+    color: white;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    user-select: none;
+}
+
+.btn:hover {
+    background-color: #4356b8;
+}
+
+/* Mobile NeuroDia page */
+@media (max-width: 480px) {
+    .neurodia-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+    .btn-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .btn {
+        width: 100%;
+        padding: 1rem 0;
+        font-size: 1rem;
+    }
 }
