@@ -24,17 +24,23 @@ nav {
     max-width: 1200px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* logo a sinistra, menu a destra */
+    justify-content: space-between;
     padding: 0 2rem;
 }
 
-.logo {
-    height: 250px; /* logo grande come richiesto */
-    width: auto;
-    margin-right: 1rem; /* spazio a destra */
+/* Separazione gruppi sinistra/destra */
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
 }
 
-/* Menu bottoni in linea, allineati a destra */
+.logo {
+    height: 250px;
+    width: auto;
+    margin-right: 1rem;
+}
+
+/* Stile menu */
 .nav-links {
     list-style: none;
     display: flex;
@@ -55,7 +61,7 @@ nav {
     color: #5a6ad4;
 }
 
-/* Disabilitiamo hamburger e menu a tendina per mobile */
+/* Mobile */
 @media (max-width: 768px) {
     .nav-links {
         position: static;
@@ -67,9 +73,12 @@ nav {
         box-shadow: none;
         display: flex;
     }
+
+    .logo {
+        height: 150px;
+    }
 }
 
-/* Rimuoviamo eventuale hamburger */
 #menu-toggle, .hamburger {
     display: none !important;
 }
@@ -84,11 +93,11 @@ main {
     padding: 2rem;
     background: white;
     max-width: 650px;
-    margin: auto; /* centra verticalmente e orizzontalmente */
+    margin: auto;
     box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
     border-radius: 8px;
     text-align: center;
-    min-height: calc(100vh - 230px); /* altezza minima per occupare quasi tutta la viewport */
+    min-height: calc(100vh - 230px);
     display: flex;
     flex-direction: column;
     justify-content: center;
