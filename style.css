@@ -82,8 +82,6 @@ nav {
     display: none !important;
 }
 
-/* main e altre sezioni restano uguali */
-
 main {
     padding: 2rem;
     background: white;
@@ -132,52 +130,51 @@ footer {
     margin: 2rem auto 3rem auto;
 }
 
-/* --- Sezione neurodia modifiche aggiunte --- */
+/* --- Sezione NeuroDia Styling --- */
 
-#neurodia {
+.neurodia-section {
     max-width: 650px;
-    margin: 2rem auto;
-    text-align: left;
-    font-size: 1.1rem;
+    margin: 3rem auto 4rem auto;
+    text-align: center;
+}
+
+.neurodia-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
     color: #222;
 }
 
-#neurodia h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #5a6ad4;
-    text-align: center;
-}
-
-#neurodia p {
+.neurodia-section p {
+    font-size: 1.1rem;
     margin-bottom: 1.5rem;
+    color: #444;
     line-height: 1.5;
 }
 
-#neurodia .diario-copertina {
-    display: block;
-    margin: 1rem auto;
-    max-width: 300px;
+.diario-copertina {
+    max-width: 100%;
+    height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    box-shadow: 0 6px 15px rgb(0 0 0 / 0.15);
+    margin-bottom: 1.5rem;
 }
 
-#neurodia .prezzo {
-    font-weight: 600;
-    margin: 1rem 0 2rem 0;
-    color: #444;
-    font-size: 1.1rem;
-    text-align: center;
+.prezzo {
+    font-weight: 700;
+    color: #5a6ad4;
+    margin-bottom: 1.5rem;
 }
 
-#neurodia .btn-container {
+/* Bottoni NeuroDia */
+.btn-container {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2rem;
+    margin-top: 1rem;
     flex-wrap: wrap;
 }
 
-#neurodia button {
+.btn-container button {
     background-color: #5a6ad4;
     color: white;
     border: none;
@@ -187,14 +184,14 @@ footer {
     font-weight: 700;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    box-shadow: 0 4px 8px rgb(90 106 212 / 0.4);
+    min-width: 180px;
 }
 
-#neurodia button:hover {
+.btn-container button:hover {
     background-color: #4356b8;
 }
 
-/* --- Nuovo CSS per pagina accesso --- */
+/* --- Accesso e Registrazione (lasciati come avevi) --- */
 
 .login-wrapper {
   max-width: 400px;
@@ -288,8 +285,6 @@ footer {
   }
 }
 
-/* --- Registrazione --- */
-
 .register-wrapper {
   max-width: 450px;
   margin: 3rem auto;
@@ -354,47 +349,4 @@ footer {
 
 .register-wrapper button:hover {
   background-color: #4356b8;
-}
-
-/* Password criteria box */
-
-.password-criteria {
-  background: #f9f9f9;
-  padding: 1rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  margin-top: -1rem;
-  margin-bottom: 1rem;
-  border: 1px solid #e0e0e0;
-  text-align: left;
-}
-
-.password-criteria li {
-  list-style: none;
-  margin: 0.4rem 0;
-  color: #999;
-  display: flex;
-  align-items: center;
-}
-
-.password-criteria li.valid {
-  color: #28a745;
-}
-
-.password-criteria li::before {
-  content: "✖";
-  margin-right: 8px;
-  color: #999;
-}
-
-.password-criteria li.valid::before {
-  content: "✔";
-  color: #28a745;
-}
-
-@media (max-width: 480px) {
-  .register-wrapper {
-    width: 90%;
-    padding: 1.5rem;
-  }
 }
