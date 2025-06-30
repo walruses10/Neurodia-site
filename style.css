@@ -327,3 +327,28 @@ form button:focus {
   color: green;
   font-weight: 700;
 }
+/* Stile specifico per la pagina contatti */
+.contatti-section {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(90, 106, 212, 0.2);
+  text-align: center;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.contatti-section a {
+  color: #5a6ad4;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.contatti-section a:hover,
+.contatti-section a:focus {
+  color: #3b48b5;
+  outline: none;
+}
