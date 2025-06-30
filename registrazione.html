@@ -17,6 +17,20 @@
       cursor: pointer;
       color: #444;
     }
+    /* Password criteria valid style */
+    .password-criteria li {
+      color: #888;
+      margin-bottom: 0.3rem;
+      list-style: none;
+      text-align: left;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .password-criteria li.valid {
+      color: #5a6ad4;
+      font-weight: 700;
+    }
   </style>
 </head>
 <body>
@@ -89,7 +103,7 @@
 
   const passwordInput = document.getElementById('password');
 
-  // Spunte password
+  // Spunte password dinamica
   const lengthCriteria = document.getElementById('lengthCriteria');
   const numberCriteria = document.getElementById('numberCriteria');
   const specialCharCriteria = document.getElementById('specialCharCriteria');
