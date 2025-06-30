@@ -236,6 +236,8 @@ footer {
 
 /* ------------------ FORM (ACCESSO & REGISTRAZIONE) ------------------ */
 
+/* Usa qui il tuo stile originale per accesso/registrazione, oppure ti aiuto a uniformare */
+
 form {
   max-width: 450px;
   margin: 2rem auto 4rem auto;
@@ -319,51 +321,9 @@ form button:focus {
   }
 }
 
-/* ------------------ VALIDAZIONE PASSWORD ------------------ */
-
-.password-criteria {
-  list-style: none;
-  padding-left: 0;
-  text-align: left;
-  margin-bottom: 1.5rem;
-}
-
-.password-criteria li {
-  padding-left: 1.5rem;
-  margin-bottom: 0.5rem;
-  position: relative;
-  color: #666666;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.password-criteria li::before {
-  content: '✗';
-  position: absolute;
-  left: 0;
-  color: #cc3333;
-  font-weight: 900;
-}
+/* ------------------ Password criteria valid state ------------------ */
 
 .password-criteria li.valid {
-  color: #2ecc71;
+  color: green;
+  font-weight: 700;
 }
-
-.password-criteria li.valid::before {
-  content: '✓';
-  color: #2ecc71;
-}
-
-/* ------------------ CHECKBOX MOSTRA PASSWORD ------------------ */
-
-.show-password-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  user-select: none;
-  cursor: pointer;
-  color: #444;
-}
-
