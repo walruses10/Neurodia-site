@@ -82,11 +82,9 @@ nav {
     display: none !important;
 }
 
-.header-gradient {
-    height: 130px;
-    background: linear-gradient(to bottom, #a9abb7 0%, #ffffff 100%);
-    width: 100%;
-}
+/* Rimosso .header-gradient */
+
+/* main e altre sezioni restano uguali */
 
 main {
     padding: 2rem;
@@ -134,22 +132,3 @@ footer {
 .welcome-message {
     max-width: 650px;
     margin: 2rem auto 3rem auto;
-    text-align: center;
-    padding: 0 1rem;
-    color: #333;
-}
-
-.welcome-message h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #5a6ad4; /* blu menu hover */
-    margin-bottom: 1rem;
-    line-height: 1.2;
-}
-
-.welcome-message p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: #555;
-    font-weight: 400;
-}
