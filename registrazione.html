@@ -17,19 +17,44 @@
       cursor: pointer;
       color: #444;
     }
-    /* Password criteria valid style */
-    .password-criteria li {
-      color: #888;
-      margin-bottom: 0.3rem;
+
+    /* Lista criteri password */
+    .password-criteria {
       list-style: none;
+      padding-left: 0;
+      margin-bottom: 1.5rem;
       text-align: left;
-      max-width: 300px;
+      max-width: 350px;
       margin-left: auto;
       margin-right: auto;
     }
+    .password-criteria li {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.6rem;
+      position: relative;
+      padding-left: 24px;
+      color: #c0392b; /* rosso per default */
+      user-select: none;
+      transition: color 0.3s ease;
+    }
+    .password-criteria li::before {
+      content: "✗"; /* X rossa di default */
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: bold;
+      color: #c0392b; /* rosso */
+      font-size: 1.1rem;
+      line-height: 1;
+      transition: color 0.3s ease, content 0.3s ease;
+    }
     .password-criteria li.valid {
-      color: #5a6ad4;
-      font-weight: 700;
+      color: #27ae60; /* verde */
+    }
+    .password-criteria li.valid::before {
+      content: "✓"; /* spunta verde */
+      color: #27ae60;
     }
   </style>
 </head>
@@ -103,7 +128,7 @@
 
   const passwordInput = document.getElementById('password');
 
-  // Spunte password dinamica
+  // Elementi criteri password
   const lengthCriteria = document.getElementById('lengthCriteria');
   const numberCriteria = document.getElementById('numberCriteria');
   const specialCharCriteria = document.getElementById('specialCharCriteria');
@@ -144,11 +169,7 @@
   // Mostra/nascondi password
   const showPasswordCheckbox = document.getElementById('showPassword');
   showPasswordCheckbox.addEventListener('change', () => {
-    if(showPasswordCheckbox.checked) {
-      passwordInput.type = 'text';
-    } else {
-      passwordInput.type = 'password';
-    }
+    passwordInput.type = showPasswordCheckbox.checked ? 'text' : 'password';
   });
 
   // Form submit
@@ -156,8 +177,8 @@
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    // Qui puoi aggiungere validazioni lato client
-    // e chiamate backend per registrazione reale
+    // Validazioni base lato client (se vuoi aggiungere)
+    // Per ora solo alert
 
     alert("Registrazione completata! (funzionalità backend da implementare)");
   });
