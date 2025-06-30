@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NeuroDia - Registrazione</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f6f8ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .register-wrapper {
+      max-width: 500px;
+      margin: 60px auto;
+      padding: 30px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .password-checks {
+      font-size: 0.9em;
+      margin-top: 10px;
+    }
+
+    .password-checks li {
+      list-style: none;
+      color: #777;
+    }
+
+    .password-checks li.valid {
+      color: green;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #5C67F2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #4a54e1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="register-wrapper">
+    <h2>Crea il tuo account</h2>
+
+    <form id="registerForm">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="cognome">Cognome</label>
+      <input type="text" id="cognome" name="cognome" required />
+
+      <label for="dataNascita">Data di nascita</label>
+      <input type="date" id="dataNascita" name="dataNascita" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+      <div id="email-error" class="error"></div>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+      
+      <ul class="password-checks">
+        <li id="length">✓ 8-14 caratteri</li>
+        <li id="uppercase">✓ Inizia con maiuscola</li>
+        <li id="number">✓ Contiene almeno un numero</li>
+        <li id="special">✓ Contiene un carattere speciale</li>
+      </ul>
+
+      <button type="submit">Registrati</button>
+    </form>
+  </div>
+
+  <script>
+    // Simulazione email già registrate
+    const existingEmails = ["test@email.com", "utente@neurodia.it"];
+
+    const emailInput = document.getElementById("email");
+    const emailError = document.getElementById("email-error");
+    const passwordInput = document.getElementById("password");
+
+    const lengthCheck = document.getElementById("length");
+    const uppercaseCheck = document.getElementById("uppercase");
+    const numberCheck = document.getElementById("number");
+    const specialCheck = document.getElementById("special");
+
+    emailInput.addEventListener("blur", function () {
+      const email = emailInput.value.trim();
+      if (existingEmails.includes(email)) {
+        emailError.textContent = "Email già registrata.";
+      } else {
+        emailError.textContent = "";
+      }
+    });
+
+    passwordInput.addEventListener("input", function () {
+      const pwd = passwordInput.value;
+
+      // Lunghezza
+      if (pwd.length >= 8 && pwd.length <= 14) {
+        lengthCheck.classList.add("valid");
+      } else {
+        lengthCheck.classList.remove("valid");
+      }
+
+      // Prima maiuscola
+      if (pwd.charAt(0).match(/[A-Z]/)) {
+        uppercaseCheck.classList.add("valid");
+      } else {
+        uppercaseCheck.classList.remove("valid");
+      }
+
+      // Numero
+      if (/\d/.test(pwd)) {
+        numberCheck.classList.add("valid");
+      } else {
+        numberCheck.classList.remove("valid");
+      }
+
+      // Carattere speciale
+      if (/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(pwd)) {
+        specialCheck.classList.add("valid");
+      } else {
+        specialCheck.classList.remove("valid");
+      }
+    });
+
+    // (Opzionale) Blocco invio se la email è già registrata
+    document.getElementById("registerForm").addEventListener("submit", function (e) {
+      if (existingEmails.includes(emailInput.value.trim())) {
+        e.preventDefault();
+        alert("Questa email è già registrata.");
+      }
+    });
+  </script>
+</body>
+</html>
