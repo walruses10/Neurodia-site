@@ -419,3 +419,28 @@ form button:focus {
     font-size: 1.1rem;
   }
 }
+.hero-button {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  background-color: #4a90e2;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #357abd;
+}
+.section-link {
+  color: #4a90e2;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.section-link:hover {
+  border-color: #4a90e2;
+}
+
