@@ -97,14 +97,14 @@ nav {
 /* ------------------ MAIN CONTENT ------------------ */
 
 main {
+  flex-grow: 1;
   max-width: 650px;
-  margin: 3rem auto 0 auto;
+  margin: 3rem auto 5rem auto;
   padding: 2rem;
   box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
   border-radius: 8px;
   background: white;
   text-align: center;
-  flex: 1 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -118,7 +118,6 @@ footer {
   background-color: #f7f2f9;
   font-size: 0.9rem;
   color: #777777;
-  flex-basis: auto;
 }
 
 /* Preview iframe e immagini */
