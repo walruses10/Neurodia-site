@@ -27,6 +27,9 @@
   </div>
 </nav>
 
+<!-- aggiunto per coerenza con index.html -->
+<div class="header-gradient"></div>
+
 <main>
   <section class="contact-section">
     <h1>Contattaci</h1>
@@ -42,7 +45,8 @@
       <label for="message">Messaggio</label>
       <textarea id="message" name="message" placeholder="Scrivi il tuo messaggio" rows="6" required></textarea>
 
-      <button type="submit">Invia</button>
+      <!-- bottone aggiornato per stile coerente -->
+      <button type="submit" class="hero-button">📩 Invia messaggio</button>
     </form>
   </section>
 </main>
@@ -61,7 +65,7 @@
       alert('Per favore compila tutti i campi.');
       return false;
     }
-    // semplice regex email
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       alert('Inserisci un indirizzo email valido.');
@@ -73,3 +77,4 @@
 
 </body>
 </html>
+
