@@ -6,7 +6,7 @@
   <title>NeuroDia - Registrazione</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Mantengo gli stili specifici per checkbox e lista criteri password */
+    /* Stili per checkbox e lista criteri password */
     .show-password-wrapper {
       display: flex;
       align-items: center;
@@ -55,6 +55,16 @@
       content: "✓";
       color: #27ae60;
     }
+
+    /* Stile messaggio errore email */
+    #email-error {
+      color: #c0392b;
+      font-weight: 600;
+      margin-top: 4px;
+      display: none;
+      font-size: 0.9rem;
+      user-select: none;
+    }
   </style>
 </head>
 <body>
@@ -87,8 +97,19 @@
     <p>Crea un nuovo account per accedere al diario delle emozioni.</p>
 
     <form id="registerForm" action="#" method="POST" novalidate>
+
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome" required />
+
+      <label for="cognome">Cognome</label>
+      <input type="text" id="cognome" name="cognome" placeholder="Inserisci il tuo cognome" required />
+
+      <label for="dataNascita">Data di nascita</label>
+      <input type="date" id="dataNascita" name="dataNascita" required />
+
       <label for="email">Email</label>
       <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required />
+      <div id="email-error">Email già esistente</div>
 
       <label for="password">Password</label>
       <input type="password" id="password" name="password" placeholder="Inserisci una password sicura" required />
@@ -166,8 +187,36 @@
     passwordInput.type = showPasswordCheckbox.checked ? 'text' : 'password';
   });
 
+  const emailInput = document.getElementById('email');
+  const emailError = document.getElementById('email-error');
+
+  // Simulazione elenco email già registrate
+  const registeredEmails = [
+    'esempio1@mail.com',
+    'utente@gmail.com',
+    'prova@domain.it'
+  ];
+
+  emailInput.addEventListener('input', () => {
+    const emailValue = emailInput.value.trim().toLowerCase();
+    if (registeredEmails.includes(emailValue)) {
+      emailError.style.display = 'block';
+    } else {
+      emailError.style.display = 'none';
+    }
+  });
+
   document.getElementById('registerForm').addEventListener('submit', (e) => {
     const allValid = Object.values(criteria).every(item => item.classList.contains('valid'));
+    const emailValue = emailInput.value.trim().toLowerCase();
+
+    if (registeredEmails.includes(emailValue)) {
+      e.preventDefault();
+      emailError.style.display = 'block';
+      emailInput.focus();
+      return;
+    }
+
     if (!allValid) {
       e.preventDefault();
       alert('La password non rispetta tutti i criteri richiesti.');
