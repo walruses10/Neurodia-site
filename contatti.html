@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contatti - NeuroDia</title>
+  <title>NeuroDia - Contatti</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -27,19 +27,49 @@
   </div>
 </nav>
 
-<div class="header-gradient"></div>
-
 <main>
-  <section>
+  <section class="contact-section">
     <h1>Contattaci</h1>
-    <p>Per qualsiasi informazione puoi scriverci all'indirizzo:</p>
-    <p><a href="mailto:info@neurodia.it">info@neurodia.it</a></p>
+    <p>Hai domande o vuoi maggiori informazioni? Compila il modulo e ti risponderemo al più presto.</p>
+
+    <form id="contactForm" action="mailto:avallonecarlo98@gmail.com" method="post" enctype="text/plain" onsubmit="return validateContactForm()">
+      <label for="name">Nome e Cognome</label>
+      <input type="text" id="name" name="name" placeholder="Il tuo nome completo" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="La tua email" required />
+
+      <label for="message">Messaggio</label>
+      <textarea id="message" name="message" placeholder="Scrivi il tuo messaggio" rows="6" required></textarea>
+
+      <button type="submit">Invia</button>
+    </form>
   </section>
 </main>
 
 <footer>
   <p>&copy; 2025 NeuroDia. Tutti i diritti riservati.</p>
 </footer>
+
+<script>
+  function validateContactForm() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+      alert('Per favore compila tutti i campi.');
+      return false;
+    }
+    // semplice regex email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert('Inserisci un indirizzo email valido.');
+      return false;
+    }
+    return true;
+  }
+</script>
 
 </body>
 </html>
