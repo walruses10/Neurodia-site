@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Neurodia – Il diario delle emozioni. Monitora le tue emozioni e il tuo benessere psicologico giorno dopo giorno." />
-  <title>Neurodia</title>
+  <title>NeuroDia</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,53 +11,49 @@
 <nav>
   <div class="nav-container">
     <div class="nav-left">
-      <img src="logo.png" alt="NeuroDia Logo" class="logo" />
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">HOME</a></li>
-        <li><a href="neurodia.html">NEURODIA</a></li>
-        <li><a href="contatti.html">CONTATTI</a></li>
-      </ul>
+      <a href="index.html">
+        <img src="logo.png" alt="Logo NeuroDia" class="logo" />
+      </a>
     </div>
+
     <div class="nav-right">
-      <ul class="nav-links">
-        <li><a href="accesso.html">ACCEDI</a></li>
-        <li><a href="registrazione.html">REGISTRATI</a></li>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="neurodia.html">NeuroDia</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
       </ul>
+      <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
     </div>
   </div>
 </nav>
 
-<div class="header-gradient"></div>
-
 <main>
-
-  <section class="hero-section" id="home">
-    <h1>Neurodia – Il diario delle emozioni</h1>
-    <p class="hero-subtitle">Scopri cosa ti fa stare davvero bene.</p>
-    <p>Con Neurodia puoi monitorare le tue emozioni, le abitudini quotidiane e il tuo benessere psicologico giorno dopo giorno.</p>
-    <p>Un percorso di consapevolezza, supportato da una psicologa, per prenderti cura di te in modo autentico.</p>
-    <p class="hero-cta">
-      <a href="registrazione.html" class="hero-button">👉 Inizia oggi e ricevi un primo colloquio gratuito 👈</a>
+  <section class="hero-section">
+    <h1>Benvenuto su NeuroDia</h1>
+    <p class="hero-subtitle">Il tuo diario digitale per monitorare emozioni e attività quotidiane</p>
+    <p>
+      NeuroDia ti aiuta a tenere traccia del tuo benessere in modo semplice e intuitivo,
+      con un'interfaccia chiara sia da computer che da smartphone.
     </p>
+    <span class="hero-cta">Inizia subito il tuo percorso!</span>
   </section>
-
-  <section class="preview" id="neurodia">
-    <h2>Copertina del Diario</h2>
-    <img src="Copertina2.png" alt="Copertina del Diario" style="width:100%; height:auto; max-height:600px;" />
-    <p class="notice">🔒 Per scaricare il diario completo, è necessario effettuare l’accesso.</p>
-  </section>
-
-  <section id="contatti">
-    <h2>
-      <a href="contatti.html" class="hero-button">Contattaci</a>
-    </h2>
-  </section>
-
 </main>
 
 <footer>
-  <p>&copy; 2025 NeuroDia. Tutti i diritti riservati.</p>
+  <p>&copy; 2025 NeuroDia - Tutti i diritti riservati</p>
 </footer>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+    menuToggle.setAttribute('aria-expanded', !expanded);
+    navLinks.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>
+
