@@ -96,12 +96,13 @@ main {
   border-radius: 8px;
   background: white;
   text-align: center;
-  min-height: auto;  /* Modifica qui per far vedere footer */
+  min-height: 100vh;  /* Modifica qui per far vedere footer */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 
 /* Preview iframe e immagini */
 .preview {
