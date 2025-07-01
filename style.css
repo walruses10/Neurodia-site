@@ -443,4 +443,24 @@ form button:focus {
 .section-link:hover {
   border-color: #4a90e2;
 }
+.hero-button {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  background-color: #4a90e2; /* colore blu armonioso */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: #357abd; /* blu più scuro al passaggio del mouse */
+  box-shadow: 0 0 8px rgba(53, 122, 189, 0.7);
+  outline: none;
+}
+
 
