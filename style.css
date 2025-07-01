@@ -103,9 +103,6 @@ main {
   align-items: center;
 }
 
-/* Welcome Message (Home) */
-/* Rimosso .welcome-message perché sostituito da .hero-section */
-
 /* Preview iframe e immagini */
 .preview {
   max-width: 450px;
@@ -312,6 +309,11 @@ form button:focus {
     width: 100%;
     min-width: unset;
   }
+  
+  /* ---------- MODIFICA AGGIUNTA ---------- */
+  .preview {
+    max-width: 100%;
+  }
 }
 
 /* ------------------ Password criteria valid state ------------------ */
@@ -417,56 +419,6 @@ form button:focus {
   }
   .hero-cta {
     font-size: 1.1rem;
+    padding: 0.7rem 1.2rem;
   }
-}
-.hero-button {
-  display: inline-block;
-  padding: 0.6em 1.2em;
-  background-color: #4a90e2;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-
-.hero-button:hover {
-  background-color: #357abd;
-}
-.section-link {
-  color: #4a90e2;
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.3s ease;
-}
-
-.section-link:hover {
-  border-color: #4a90e2;
-}
-.hero-button {
-  display: inline-block;
-  padding: 0.6em 1.2em;
-  background-color: #4a90e2; /* colore blu armonioso */
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.hero-button:hover,
-.hero-button:focus {
-  background-color: #357abd; /* blu più scuro al passaggio del mouse */
-  box-shadow: 0 0 8px rgba(53, 122, 189, 0.7);
-  outline: none;
-}
-nav {
-  pointer-events: auto;
-  z-index: 9999; /* più alto del resto */
-}
-.nav-links li a {
-  pointer-events: auto;
-  z-index: 10000;
 }
