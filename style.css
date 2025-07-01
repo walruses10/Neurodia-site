@@ -12,6 +12,9 @@ body {
   color: #333333;
   line-height: 1.6;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 a {
@@ -90,13 +93,13 @@ nav {
 
 main {
   max-width: 650px;
-  margin: 3rem auto 5rem auto;
+  margin: 3rem auto 0 auto;
   padding: 2rem;
   box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
   border-radius: 8px;
   background: white;
   text-align: center;
-  min-height: 100vh;  /* Modifica qui per far vedere footer */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
