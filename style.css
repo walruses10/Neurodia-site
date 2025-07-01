@@ -462,5 +462,14 @@ form button:focus {
   box-shadow: 0 0 8px rgba(53, 122, 189, 0.7);
   outline: none;
 }
+nav {
+  pointer-events: auto;
+  z-index: 9999; /* più alto del resto */
+}
+.nav-links li a {
+  pointer-events: auto;
+  z-index: 10000;
+}
+
 
 
