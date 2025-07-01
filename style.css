@@ -12,8 +12,6 @@ body {
   color: #333333;
   line-height: 1.6;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 a {
@@ -92,18 +90,17 @@ nav {
 
 main {
   max-width: 650px;
-  margin: 3rem auto 2rem auto; /* Modificato da 5rem a 2rem */
+  margin: 3rem auto 5rem auto;
   padding: 2rem;
   box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
   border-radius: 8px;
   background: white;
   text-align: center;
-  min-height: auto;
+  min-height: auto;  /* Modifica qui per far vedere footer */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1;
 }
 
 /* Preview iframe e immagini */
@@ -140,7 +137,7 @@ footer {
 
 .neurodia-main {
   max-width: 700px;
-  margin: 3rem auto 2rem auto; /* Modificato da 5rem a 2rem */
+  margin: 3rem auto 5rem auto;
   padding: 2rem 3rem;
   box-shadow: 0 0 18px rgb(90 106 212 / 0.3);
   border-radius: 14px;
@@ -312,7 +309,7 @@ form button:focus {
     width: 100%;
     min-width: unset;
   }
-
+  
   /* ---------- MODIFICA AGGIUNTA ---------- */
   .preview {
     max-width: 100%;
@@ -427,5 +424,3 @@ form button:focus {
   border-radius: 0 0 40% 40%;
   filter: drop-shadow(0 8px 10px rgba(74,87,180,0.25));
   user-select: none;
-}
-
