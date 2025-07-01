@@ -92,7 +92,7 @@ nav {
 
 main {
   max-width: 650px;
-  margin: 3rem auto 5rem auto;
+  margin: 3rem auto 2rem auto; /* Modificato da 5rem a 2rem */
   padding: 2rem;
   box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
   border-radius: 8px;
@@ -140,7 +140,7 @@ footer {
 
 .neurodia-main {
   max-width: 700px;
-  margin: 3rem auto 5rem auto;
+  margin: 3rem auto 2rem auto; /* Modificato da 5rem a 2rem */
   padding: 2rem 3rem;
   box-shadow: 0 0 18px rgb(90 106 212 / 0.3);
   border-radius: 14px;
@@ -428,3 +428,4 @@ form button:focus {
   filter: drop-shadow(0 8px 10px rgba(74,87,180,0.25));
   user-select: none;
 }
+
